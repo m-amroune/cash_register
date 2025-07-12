@@ -114,13 +114,13 @@ const chargeDue = () => {
 
   if (remainingChange > 0) {
     cashRegister.status = "INSUFFICIENT_FUNDS";
-    changeDue.innerText = "Status: INSUFFICIENT_FUNDS";
+    changeDue.innerHTML = "<strong>Status</strong>  : INSUFFICIENT_FUNDS";
   } else if (totalCashAfter === 0) {
     cashRegister.status = "CLOSED";
-    changeDue.innerText = `Status: CLOSED ${changeArray.map(([currency, amount]) => `${currency}: $${amount.toFixed(2)}`).join(" ")}`;
+    changeDue.innerHTML = `<strong>Status</strong>  : CLOSED ${changeArray.map(([currency, amount]) => `${currency}: $${amount.toFixed(2)}`).join(" ")}`;
   } else {
     cashRegister.status = "OPEN";
-    changeDue.innerText = `Status: OPEN ${changeArray.map(([currency, amount]) => `${currency}: $${amount.toFixed(2)}`).join(" ")}`;
+    changeDue.innerHTML = `<strong>Status</strong> : OPEN<br> ${changeArray.map(([currency, amount]) => `<strong>${currency}</strong>: $${amount.toFixed(2)}`).join("<br>")}`;
   }
 
   displayCid();
@@ -172,5 +172,7 @@ const displayCid = () => {
     }).join("<br>");
 
     cid.innerHTML = cidText;
+   
 };
 displayCid();
+

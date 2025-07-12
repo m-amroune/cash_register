@@ -8,6 +8,77 @@ html,
 body {
   font-family: "Lato", sans-serif;
   line-height: 1.5;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5; 
 }
 
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#payment-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.cash{
+  height: 2rem;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+#purchase-btn{
+  background-color: orange;
+  height: 2rem;
+  margin-top: 1rem;
+  width: 100px;
+  display: block;
+  margin: 1rem auto;
+
+
+}
+
+#price-screen{
+  background-color: aquamarine;
+  text-align: center;
+}
+
+#cash-in-drawer{
+  background-color: aquamarine;
+  margin-top: 1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 1rem;
+  width: 300px;
+  text-align: right;
+}
+
+
+#drawer-icon {
+  position: absolute;
+  font-size: 1.8rem;
+  color: #333;
+
+}
+
+
+
+#bottom-cid{
+  background-color: aquamarine;
+  border: 0 solid;
+  height: 2rem;
+  margin-top: 0.5rem;
+}
 
